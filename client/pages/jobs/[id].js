@@ -20,9 +20,9 @@ export async function getServerSideProps({ params }) {
       `${process.env.API_URL}/api/jobs/${params.id}/`
     );
 
-    console.log(res.data);
-    const job = JSON.stringify(res.data.job);
-    const candidates = JSON.stringify(res.data.candidates);
+    //console.log(res.data);
+    const job = (res.data.job);
+    const candidates = (res.data.candidates);
 
     return {
       props: {

@@ -4,7 +4,7 @@ import Home from "../components/Home";
 import axios from "axios";
 
 export default function Index({ data }) {
-  console.log(data);
+  //console.log(data);
   return (
     <Layout>
       <Home data={data} />
