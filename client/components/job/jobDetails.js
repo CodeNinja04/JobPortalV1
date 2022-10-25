@@ -1,27 +1,27 @@
 import React, { useEffect } from "react";
 import moment from "moment";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
-import { loadEnvConfig } from "@next/env";
-//mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
+//import { loadEnvConfig } from "@next/env";
+mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
 
 const JobDetails = ({ job, candidates }) => {
         const jobs =job;
-        console.log("its jobs", process.env.MAPBOX_ACCESS_TOKEN);
-//  useEffect(async () => {
-//      //console.log(process.env.MAPBOX_ACCESS_TOKEN);
-//      const coordinates = job.point.split("(")[1].replace(")", "").split(" ");
-//      console.log("coordinates",coordinates)
-//    // Create map and set the center point
-//    const map = new mapboxgl.Map({
-//      container: "job-map",
-//      style: "mapbox://styles/mapbox/streets-v11",
-//      center: coordinates,
-//      zoom: 11,
-//    });
-//
-//     //Add market on map
-//    new mapboxgl.Marker().setLngLat(cooridnates).addTo(map);
-//  }, []);
+        console.log("its jobs", job.point.split("(")[1].replace(")", "").split(" "));
+  useEffect(async () => {
+      //console.log(process.env.MAPBOX_ACCESS_TOKEN);
+      const coordinates = job.point.split("(")[1].replace(")", "").split(" ");
+      console.log("coordinates",coordinates)
+    // Create map and set the center point
+    const map = new mapboxgl.Map({
+      container: "job-map",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: coordinates,
+      zoom: 11,
+    });
+
+     //Add market on map
+    new mapboxgl.Marker().setLngLat(cooridnates).addTo(map);
+  }, []);
 
   return (
     <div className="job-details-wrapper">

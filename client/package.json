@@ -21,6 +21,11 @@
     "react-toastify": "^9.0.8",
     "styled-components": "^5.3.5"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "devDependencies": {
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0"
