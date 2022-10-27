@@ -6,5 +6,4 @@ django-filter
 django-storages               
 djangorestframework           
 djangorestframework-simplejwt
-GDAL
 psycopg2
