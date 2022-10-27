@@ -1,0 +1,10 @@
+Django
+boto3
+django-cors-headers           
+django-dotenv                 
+django-filter                 
+django-storages               
+djangorestframework           
+djangorestframework-simplejwt
+GDAL
+psycopg2
